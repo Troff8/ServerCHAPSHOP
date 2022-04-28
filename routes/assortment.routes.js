@@ -2,6 +2,7 @@ const Router = require('express')
 const router = new Router()
 const assortmentController = require('../controller/assortment.controller')
 
+router.get('/check',assortmentController.check)
 router.post('/setAlco',assortmentController.setAlco)
 router.get('/getFullAlco',assortmentController.getFullAlco)
 router.get('/getWineAlco',assortmentController.getWineAlco)

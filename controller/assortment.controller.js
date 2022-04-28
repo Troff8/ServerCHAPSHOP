@@ -16,6 +16,14 @@ class AssortmentController{
             res.json('Ошибка сервера - catch')
         }
     }
+    async check(req,res){
+        try{
+            res.json('Запрос долетел')
+        }
+        catch(e){
+            res.json('Ошибка сервера - catch')
+        }
+    }
     async getFullAlco(req,res){
         try{
             const alco = await db.query(`SELECT * FROM ALCO`)
